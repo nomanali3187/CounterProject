@@ -1,0 +1,23 @@
+<h1>Counter</h1>
+
+
+<p aria-live="polite">Timer count: <strong>{{ timerCount }}</strong></p>
+
+<p>This component demonstrates fetching Inventory from the server.</p>
+
+<p *ngIf="!inventory"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="inventory">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of inventory">
+      <td>{{ i.description }}</td>
+      <td>{{ i.count }}</td>
+    </tr>
+  </tbody>
+</table>
